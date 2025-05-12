@@ -37,7 +37,7 @@ mode = st.radio("Choose prediction mode:", ["Single Learner", "Batch Prediction 
 if mode == "Single Learner":
     st.subheader("🔍 Predict Single Learner")
     avg_completion_rate = st.number_input("Average Completion Rate (%)", min_value=0.0, max_value=100.0, value=45.0)
-    unique_videos_watched = st.number_input("Number of Unique Videos Watched", min_value=0, value=5)
+    unique_videos_watched = st.number_input("Number of Unique Videos Watched", min_value=1, value=5)
 
     if st.button("Predict"):
         input_df = pd.DataFrame([{
