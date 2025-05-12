@@ -3,6 +3,12 @@ import pandas as pd
 import numpy as np
 import joblib
 
+st.set_page_config(
+    page_title="Student Churn Predictor",
+    page_icon="📈",
+    layout="wide"
+)
+
 # Load models
 model_churn_label = joblib.load("streamlitapp/churn_label_model.pkl")
 model_churn = joblib.load("streamlitapp/churn_model.pkl")
@@ -80,3 +86,22 @@ else:
 
             st.success("✅ Batch prediction completed.")
             st.dataframe(df)
+
+footer = """
+<style>
+footer {
+    visibility: hidden;
+}
+footer:after {
+    content:'Developed by Nnamdi A. Isichei | ✉️ nnamdi@datafiedtech.com | 🔗 LinkedIn: https://www.linkedin.com/in/nnamdi-isichei/'; 
+    visibility: visible;
+    display: block;
+    position: relative;
+    padding: 10px;
+    top: 2px;
+    color: #888;
+    text-align: center;
+}
+</style>
+"""
+st.markdown(footer, unsafe_allow_html=True)
