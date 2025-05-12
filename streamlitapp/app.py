@@ -4,15 +4,15 @@ import numpy as np
 import joblib
 
 # Load models
-model_churn_label = joblib.load("churn_label_model.pkl")
-model_churn = joblib.load("churn_model.pkl")
-model_churn_rf = joblib.load("churn_rf_model.pkl")
+model_churn_label = joblib.load("streamlitapp/churn_label_model.pkl")
+model_churn = joblib.load("streamlitapp/churn_model.pkl")
+model_churn_rf = joblib.load("streamlitapp/churn_rf_model.pkl")
 
 # Load scalers
-scaler_completion = joblib.load("scaler_completion.pkl")
-scaler_unique = joblib.load("scaler_unique.pkl")
-scaler_completion_rf = joblib.load("scaler_completion_RF.pkl")
-scaler_unique_rf = joblib.load("scaler_unique_RF.pkl")
+scaler_completion = joblib.load("streamlitapp/scaler_completion.pkl")
+scaler_unique = joblib.load("streamlitapp/scaler_unique.pkl")
+scaler_completion_rf = joblib.load("streamlitapp/scaler_completion_RF.pkl")
+scaler_unique_rf = joblib.load("streamlitapp/scaler_unique_RF.pkl")
 
 # Preprocessing functions
 def preprocess_features(df: pd.DataFrame) -> pd.DataFrame:
