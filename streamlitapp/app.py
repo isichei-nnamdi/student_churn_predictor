@@ -12,7 +12,7 @@ model_churn_rf = joblib.load("streamlitapp/churn_rf_model.pkl")
 scaler_completion = joblib.load("streamlitapp/scaler_completion.pkl")
 scaler_unique = joblib.load("streamlitapp/scaler_unique.pkl")
 scaler_completion_rf = joblib.load("streamlitapp/scaler_completion_rf.pkl")
-scaler_unique_rf = joblib.load("streamlitapp/scaler_unique_rf.pkl")
+scaler_unique_rf = joblib.load("streamlitapp/unique_scaled_rf.pkl")
 
 # Preprocessing functions
 def preprocess_features(df: pd.DataFrame) -> pd.DataFrame:
